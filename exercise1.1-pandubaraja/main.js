@@ -60,7 +60,7 @@ const isNotBlank = (value) => {
 
 const isAlphabet = (value) => {
     return {
-        isValid: isNaN(value),
+        isValid: /^[A-Za-z]+$/.test(value),
         message: 'Value should be alphabet!'
     }
 }
