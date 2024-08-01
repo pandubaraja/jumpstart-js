@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+}
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+input {
+    margin: 10px 0;
+    padding:15px;
+    border-radius: 8px;
+    font-size: 1em;
+    border: 1px solid #007bff;
+}
+.submit-button {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.remove-button {
+    color:#d3d3d3;
+    border: 1px solid #c7c7c7;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+}
+.remove-button:hover {
+    background-color: rgb(255, 224, 224);
+    color:#ff9696;
+    border: 1px solid #ff7474;
+}
+
+#greeting {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.error-container {
+    background-color: rgba(255, 0, 0, 0.077);
+    padding: 5px;
+    color: rgb(252, 63, 63);
+    font-weight: normal;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+.error-container ul {
+    list-style-position: inside;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.todo-container {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.todo-container li {
+    padding: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-container li:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.todo-container li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.todo-container li:hover {
+    background-color: #fffcef;
+    transform: translateY(-2px);
+}
+
+.todo-container li.completed {
+    background-color: #f1f1f1;
+}
