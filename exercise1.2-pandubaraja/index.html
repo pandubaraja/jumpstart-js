@@ -9,11 +9,25 @@
 <body>
     <div>
         <div class="container">
-            <h1>Simple To-Do List</h1>
-            <input type="text" id="todoInput" placeholder="Enter a new task" value="test">
-            <button onclick="addTodo()" class="submit-button">Add Task</button>
+            <h2>Simple To-Do List</h2>
+            <input type="text" id="todoInput" placeholder="Enter a new todo" value="Test" class="submit-input">
+            <button onclick="addTodo()" class="submit-button">Add To Do</button>
         </div>
         <div>
+            <div class="filter-container">
+                <div class="filter-item">
+                    <input type="radio" id="all" name="filter" value="all" checked />
+                    <label for="all">All</label>
+                </div>
+                <div class="filter-item">
+                    <input type="radio" id="incomplete" name="filter" value="incomplete" />
+                    <label for="incomplete">In Complete</label>
+                </div>
+                <div class="filter-item">
+                    <input type="radio" id="completed" name="filter" value="completed" />
+                    <label for="completed">Completed</label>
+                </div>
+            </div>
             <ul id="todoList" class="todo-container"></ul>
         </div>
     </div>
