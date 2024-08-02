@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h2>Simple To-Do List</h2>
+            <input type="text" id="todoInput" placeholder="Enter a new todo" class="submit-input">
+            <div id="error" class="error-container hidden"></div>
+            <button id='todoButton' class="submit-button">Add To Do</button>
+        </div>
+        <div>
+            <div class="filter-container">
+                <div class="filter-item">
+                    <input type="radio" id="all" name="filter" value="all" checked />
+                    <label for="all">All</label>
+                </div>
+                <div class="filter-item">
+                    <input type="radio" id="incomplete" name="filter" value="incomplete" />
+                    <label for="incomplete">In Complete</label>
+                </div>
+                <div class="filter-item">
+                    <input type="radio" id="completed" name="filter" value="completed" />
+                    <label for="completed">Completed</label>
+                </div>
+            </div>
+            <ul id="todoList" class="todo-container"></ul>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
