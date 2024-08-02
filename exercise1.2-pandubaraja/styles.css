@@ -23,6 +23,9 @@ body {
     border-bottom: 4px solid #74b7ff;
     padding: 12px;
 }
+.submit-input.error {
+    border-bottom: 4px solid #ff9c9c !important;
+}
 .submit-input:focus {
     border: 0;
     border-top: 2px solid #eeeeee;
@@ -127,11 +130,10 @@ body {
 }
 .error-container {
     background-color: rgba(255, 0, 0, 0.077);
-    padding: 5px;
+    padding: 2px;
     color: rgb(252, 63, 63);
     font-weight: normal;
-    font-size: 0.9em;
-    border-radius: 4px;
+    font-size: 0.8em;
 }
 .error-container ul {
     list-style-position: inside;
@@ -166,7 +168,7 @@ body {
     color: #aaaaaa;
  }
 .todo-container li:hover {
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 .todo-container li.completed {
     background-color: #e9ebeb6e;

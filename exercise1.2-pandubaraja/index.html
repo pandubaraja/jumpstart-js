@@ -10,8 +10,9 @@
     <div>
         <div class="container">
             <h2>Simple To-Do List</h2>
-            <input type="text" id="todoInput" placeholder="Enter a new todo" value="Test" class="submit-input">
-            <button onclick="addTodo()" class="submit-button">Add To Do</button>
+            <input type="text" id="todoInput" placeholder="Enter a new todo" class="submit-input">
+            <div id="error" class="error-container hidden"></div>
+            <button id='todoButton' class="submit-button">Add To Do</button>
         </div>
         <div>
             <div class="filter-container">
@@ -31,7 +32,7 @@
             <ul id="todoList" class="todo-container"></ul>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
 
