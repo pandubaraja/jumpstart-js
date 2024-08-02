@@ -85,6 +85,7 @@ body {
     border-bottom: 1px solid #c4c4c4;
     text-align: start;
     flex-grow: 1;
+    width: 65%;
     font-size: 1em;
     margin: 0 10px;
 }
@@ -128,6 +129,12 @@ body {
     color:#ff9696;
     border: 0.5px solid #ff7474;
 }
+.error-span {
+    color: rgb(252, 63, 63);
+    font-size: 0.9em;
+    max-width: 100%;
+    margin-top: 10px;
+}
 .error-container {
     background-color: rgba(255, 0, 0, 0.077);
     padding: 2px;
@@ -152,6 +159,7 @@ body {
     background-color: #ffffff;
     border-bottom: 1px solid rgba(122, 122, 122, 0.2);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
