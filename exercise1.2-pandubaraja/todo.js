@@ -108,12 +108,33 @@ function editTodo(target) {
     editInputText.addEventListener('keyup', (e) => {
         e.preventDefault()
         if (e.key == 'Enter') {
-            span.innerText = editInputText.value
-            target.replaceChild(span, editInputText)
+            const newTodoValue = editInputText.value
+            const result = validation(newTodoValue, [isNotBlank])
 
-            modifyTodoList((arr) => {
-                arr[getTodoIndex(target)].text = editInputText.value
-            })
+
+            const errorView = target.children[3] //get error view
+            if (errorView != null) errorView.remove()
+
+            if (result.isValid) {
+                span.innerText = newTodoValue
+                target.replaceChild(span, editInputText)
+
+                modifyTodoList((arr) => {
+                    arr[getTodoIndex(target)].text = newTodoValue
+                })
+            } else {
+                editInputText.value = span.innerText
+
+                const errorWrapper = document.createElement('div')
+                result.errors.forEach(error => {
+                    const errorSpan = document.createElement('div')
+                    errorSpan.classList.add('error-span')
+                    errorSpan.innerText = error
+                    errorWrapper.appendChild(errorSpan)
+                })
+                
+                target.appendChild(errorWrapper)
+            }
         }
     })
 
