@@ -1,21 +1,49 @@
-import { getComputerChoice, playRound, Choice } from './game.js';
-import { updateScore, updateMessage } from './ui.js';
+import { getComputerChoice, playRound, Choice, Outcome } from './game.js';
+import { resetUI, updateBoard } from './ui.js';
 
-// TODO: Select DOM elements
-const playerScoreSpan = document.getElementById("player-score")
-const computerScoreSpan = document.getElementById("computer-score")
-const choiceContainer = document.getElementById("choices-container")
+let playerScore = 0
+let computerScore = 0
 
-// TODO: Initialize game variables
+document.getElementById("choices-container").addEventListener('click', (event) => {
+  event.stopPropagation()
 
-// TODO: Add event listeners to choice buttons
-choiceContainer.addEventListener('click', (event) => {
-    event.stopPropagation()
+  if (!event.target.matches('button.choice')) return
+  
+  const userChoice = Choice[event.target.dataset.choice.toUpperCase()]
+  game(userChoice)
 })
 
-// Main game logic
+document.getElementById("reset").addEventListener('click', (event) => {
+  event.preventDefault()
+  resetGame()
+})
+
 function game(playerChoice) {
-  // TODO: Implement main game logic
+  const computerChoice = getComputerChoice()
+  const outCome = playRound(playerChoice, computerChoice)
+
+  switch (outCome) {
+    case Outcome.WIN:
+      playerScore++;
+      break;
+    case Outcome.LOSE:
+      computerScore++;
+      break;
+    default: break;
+  }
+  
+  updateBoard(
+    outCome,
+    playerScore,
+    playerChoice,
+    computerScore,
+    computerChoice
+  )
 }
 
-console.log(playRound(Choice.SCISSORS, getComputerChoice()))
+function resetGame() {
+  playerScore = 0
+  computerScore = 0
+
+  resetUI()
+}

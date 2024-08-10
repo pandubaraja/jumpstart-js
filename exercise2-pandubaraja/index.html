@@ -11,16 +11,21 @@
     <h1>Rock Paper Scissors</h1>
     <div class="score-board">
         <div class="score">
-            <p>Player: <span id="player-score">0</span></p>
-            <p>Computer: <span id="computer-score">0</span></p>
+            Player: <span id="player-score">0</span>
+            Computer: <span id="computer-score">0</span>
         </div>
     </div>
-    <div id="choices-container" class="choices">
-        <button class="choice" data-choice="rock">✊</button>
-        <button class="choice" data-choice="paper">✋</button>
-        <button class="choice" data-choice="scissors">✌️</button>
+    <div id="info" class="pulsing-animated">Choose</div>
+    <div id="stage" class="hide">
+      <div id="player-choice" class="choiced"></div>
+      <div id="computer-choice" class="choiced"></div>
     </div>
-    <div id="message"></div>
+    <div id="choices-container" class="choices">
+      <button class="choice" data-choice="rock">✊</button>
+      <button class="choice" data-choice="paper">✋</button>
+      <button class="choice" data-choice="scissors">✌️</button>
+    </div>
+    <button id="reset" class="reset-button" disabled>Reset</button>
   </div>
   <script src="js/main.js" type="module"></script>
 </body>
