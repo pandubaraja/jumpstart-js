@@ -1,0 +1,3 @@
+export const ENV = {
+    WEATHER_API_KEY: 'WEATHER_API_KEY_PLACEHOLDER'
+}

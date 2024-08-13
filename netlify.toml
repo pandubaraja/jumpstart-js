@@ -1,0 +1,2 @@
+[build]
+  command = "sed -i 's|WEATHER_API_KEY_PLACEHOLDER|'\"$WEATHER_API_KEY\"'|g' weather-app-pandubaraja/js/env.js"
