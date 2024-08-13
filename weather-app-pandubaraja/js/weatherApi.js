@@ -1,4 +1,4 @@
-import { WEATHER_API_KEY } from './config.js'
+const WEATHER_API_KEY = 'bb2cf1d8174eb033fe6324cba567dd92'
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const WeatherType = Object.freeze ({
