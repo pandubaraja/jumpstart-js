@@ -1,4 +1,4 @@
-const WEATHER_API_KEY = 'bb2cf1d8174eb033fe6324cba567dd92'
+import { ENV } from './env.js'
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const WeatherType = Object.freeze ({
@@ -70,7 +70,7 @@ export function fetchWeatherLatLong(lat, lon) {
 function buildUrl(baseUrl, params = {}) {
     const url = new URL(baseUrl);
 
-    url.searchParams.append('appId', WEATHER_API_KEY)
+    url.searchParams.append('appId', ENV.WEATHER_API_KEY)
     
     Object.keys(params).forEach(key => {
         url.searchParams.append(key, params[key]);
