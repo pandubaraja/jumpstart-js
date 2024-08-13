@@ -81,7 +81,7 @@ function buildUrl(baseUrl, params = {}) {
 
 function handleWeatherResponse(response) {
     if (!response.ok) {
-        return { state: 'empty', message: 'Weather data not found' }
+        return { state: 'error', code:response.status, message: response.statusText }
     }
 
     return response.json()

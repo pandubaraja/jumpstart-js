@@ -52,9 +52,6 @@ class WeatherApp {
                 this.cityInput.value = state.data.city
                 this.addToHistory(state.data.city)
                 break;
-            case 'empty':
-                this.displayEmpty()
-                break;
             case 'error': 
                 this.displayError(state.message)
                 break;
@@ -73,7 +70,6 @@ class WeatherApp {
                     fetchWeatherLatLong(lat, lon)
                         .then(state => {
                             this.handleState(state)
-                            this.updateURL(state.data.city)
                         })
                 },
                 (error) => {
@@ -122,10 +118,6 @@ class WeatherApp {
     displayLoading() {
         this.weatherContainer.innerHTML = `<div class='loader'></div>`
     }
-
-    displayEmpty() {
-        this.weatherContainer.innerHTML = '<p>City not found. Please try again.</p>'
-    }
     
     displayError(error) {
         this.weatherContainer.innerHTML = `<p>Error: ${error}</p>`
@@ -137,6 +129,7 @@ class WeatherApp {
             this.searchHistory.splice(index, 1);
             this.searchHistory.unshift(city);
             this.updateHistoryList()
+            this.updateURL(city)
             return
         }
         
