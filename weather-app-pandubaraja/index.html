@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div id="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="location-btn"><i class="i-location fa-solid fa-location-dot fa-xl"/></i></button>
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="weather-container"></div>
+        <div id="history-container">
+            <h2>Search History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="js/app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/95abae915e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+</body>
+</html>
