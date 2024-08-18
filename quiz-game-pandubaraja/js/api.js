@@ -9,7 +9,7 @@ class Question {
 
         const allAnswers = data.incorrect_answers
         allAnswers.push(this.correctAnswer)
-        // shuffleArray(allAnswers)
+        shuffleArray(allAnswers)
 
         this.choices = allAnswers
     }
