@@ -1,3 +1,5 @@
-import { initQuizGame } from './quizGame.js';
+import GameApp from './quizGame.js';
 
-document.addEventListener('DOMContentLoaded', initQuizGame);
+document.addEventListener('DOMContentLoaded', () => {
+    new GameApp()
+});

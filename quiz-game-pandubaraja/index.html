@@ -8,22 +8,40 @@
 </head>
 <body>
     <div class="container">
-        <h1>Async Quiz Game</h1>
-        <div id="difficulty-selector">
-            <label for="difficulty">Select Difficulty: </label>
-            <select id="difficulty">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
+        <div id="main-menu">
+            <span class="title">Trivia Quiz Game</span>
+            <button id="start-btn" class="orange-btn">Play Game</button>
         </div>
-        <div id="score">Score: <span id="score-value">0</span></div>
-        <div id="timer">Time: <span id="time-value">30</span>s</div>
-        <div id="quiz-container" style="display: none;">
-            <p id="question"></p>
-            <div id="answers"></div>
+        <div id="result-container"></div>
+        <div id="difficulty-menu" class="hide-menu">
+            <h1>Choose Difficulty</h1>
+            <div class="menu-container">
+                <button class="orange-btn" value="easy">Easy</button>
+                <button class="orange-btn" value="medium">Medium</button>
+                <button class="orange-btn" value="hard">Hard</button>
+            </div>
         </div>
-        <button id="start-btn">Start Quiz</button>
+        <div id="mode-menu" class="hide-menu">
+            <h1>Choose Mode</h1>
+            <div class="menu-container">
+                <button class="orange-btn" value="normal">Normal</button>
+                <button class="orange-btn" value="timeAttack">Time Attack</button>
+                <button class="orange-btn" value="suddenDeath">Sudden Death</button>
+            </div>
+        </div>
+        <div id="game-container" class="hide-menu">
+            <div id="loading" class="title hide-menu">Loading...</div>
+            <div id="panel" class="hide-menu">
+                <div id="difficulty-value" class="small-padding">Difficulty</div>
+                <div id="mode-value" class="small-padding">Mode</div>
+                <div id="score" >Score: <span id="score-value">0</span></div>
+                <div id="timer">Next question in: <span id="time-value">0</span>s</div>
+            </div>
+            <div id="quiz">
+                <div id="question" class="title"></div>
+                <div id="answers"></div>
+            </div>
+        </div>
     </div>
     <script type="module" src="js/main.js"></script>
 </body>
