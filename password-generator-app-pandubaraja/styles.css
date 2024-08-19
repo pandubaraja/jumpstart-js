@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+h1 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.input-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+#input-checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#input-checkbox div label {
+    font-size: 0.9rem;
+}
+#histories {
+    display: flex;
+    flex-direction: column;
+}
+#histories div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    cursor: pointer;
+}
+.history-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.history-item:last-child {
+    border-bottom: none;
+}
+.history-item:hover {
+    background-color: #ddd;
+}
+#strength {
+    padding: 12px 0;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #2980b9;
+}
+#password-container {
+    display: flex;
+    margin-top: 1rem;
+}
+#password {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+}
+#copy {
+    flex-shrink: 0;
+}
