@@ -12,7 +12,7 @@ body {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
 }
 h1 {
     color: #2c3e50;
@@ -32,6 +32,40 @@ input[type="number"], input[type="text"] {
     padding: 0.5rem;
     border: 1px solid #bdc3c7;
     border-radius: 4px;
+}
+#input-checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#input-checkbox div label {
+    font-size: 0.9rem;
+}
+#histories {
+    display: flex;
+    flex-direction: column;
+}
+#histories div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    cursor: pointer;
+}
+.history-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.history-item:last-child {
+    border-bottom: none;
+}
+.history-item:hover {
+    background-color: #ddd;
+}
+#strength {
+    padding: 12px 0;
 }
 button {
     background-color: #3498db;
